@@ -88,6 +88,8 @@ RUN chmod -R 777 $TVB_NEST_Examples
 RUN chmod -R 777 /home/jovyan/packages/tvb-multiscale/examples/tvb_nest
 RUN chown -R jovyan: $TVB_NEST_Examples
 RUN chown -R jovyan: /home/jovyan/packages/tvb-multiscale/examples/tvb_nest
+RUN chmod -R 777 /home/jovyan
+RUN chown -R jovyan: /home/jovyan
 
 # Extend the output data rate limit for all images to be loaded in the notebooks
 #RUN echo "c.NotebookApp.iopub_data_rate_limit = 10000000" >> /etc/jupyter/jupyter_notebook_config.py
