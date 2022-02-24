@@ -12,9 +12,7 @@
 
 #SBATCH --partition=medium
 
-singularity run --bind tvb-root/:/home/docker/packages/tvb-root,tvb-multiscale/:/home/docker/packages/tvb-multiscale multi.sif
-
-home/docker/env/neurosci/bin/python /home/docker/packages/tvb-multiscale/examples/tvb_nest/example.py
+singularity exec --bind tvb-root/:/home/docker/packages/tvb-root,tvb-multiscale/:/home/docker/packages/tvb-multiscale multi.sif /home/docker/env/neurosci/bin/python /home/docker/packages/tvb-multiscale/examples/tvb_nest/example.py
 
 #export DOCKER_HOME=/home/docker
 #export DOCKER_TVB_ROOT=$DOCKER_HOME/packages/tvb-root
